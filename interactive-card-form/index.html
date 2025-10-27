@@ -7,6 +7,47 @@
     <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
+    <main id="grid">
+        <section class="interactive-cards">
+            <div id="card-front">
+                <img src="./src/assets/icons/icon-complete.svg" alt="Card logo">
+                <p class="mock-card-number">0000 0000 0000 0000</p>
+                <p class="mock-card-name">Jane Appleseed</p>
+                <p class="mock-card-date"><span class="mock-month">00</span>/<span class="mock-year">00</span></p>
+                <img id="card-shape" src="./src/assets/images/bg-card-front.png" alt="Card front">
+            </div>
+
+            <div id="card-back">
+                <p class="mock-cvc">000</p>
+                <img src="./src/assets/images/bg-card-back.png" alt="Card back">
+            </div>
+        </section>
+
+        <form class="form-client-card">
+            <label for="card-name-input">Cardholder Name</label>
+            <input type="text" id="card-name-input" placeholder="e.g. Jane Appleseed">
+
+            <label for="card-number-input">Card Number</label>
+            <input type="text" id="card-number-input" placeholder="e.g. 1234 5678 9123 0000">
+
+            <div class="form-date-cvc">
+                <div class="form-date">
+                    <label for="date-month-input">Exp. Date</label>
+                    <input type="text" id="date-month-input" placeholder="MM">
+                    <input type="text" id="date-year-input" placeholder="YY">
+                </div>
+
+                <div class="form-cvc">
+                    <label for="cvc-input">CVC</label>
+                    <input type="text" id="cvc-input" placeholder="e.g. 123">
+                </div>
+            </div>
+
+            <input type="submit" value="Confirm">
+        </form>
+        <img src="./src/assets/images/bg-main-desktop.png" alt="Background Desktop">
+        <img src="./src/assets/images/bg-main-mobile.png" alt="Background Mobile">
+    </main>
 
     <script src="./src/scripts/main.js"></script>
 </body>
