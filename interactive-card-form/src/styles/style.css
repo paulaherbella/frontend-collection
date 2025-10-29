@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+:root {
+  --clr-primary-gradient-start: hsl(249, 99%, 64%);
+  --clr-primary-gradient-end: hsl(278, 94%, 30%);
+  --clr-error: hsl(0, 100%, 66%);
+
+  --clr-white: hsl(0, 100%, 100%);
+  --clr-gray-200: hsl(270, 3%, 87%);
+  --clr-gray-400: hsl(212, 12%, 71%);
+  --clr-purple-950: hsl(278, 68%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+#grid {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#card-shape-front, #card-shape-back{
+    display: block;
+    position: relative;
+}
+
+.card-front-infos, .mock-cvc{
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+
+
+.form-client-card{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: hsl(278, 68%, 11%);
+    font-size: 16px;
+}
+
+.form-client-card input {
+    padding: 0.6rem;
+    border-radius: 10px;
+    border-color: hsl(212, 12%, 71%);
+    border-style: solid;
+    border-width: 1px;
+}
+
+::-webkit-input-placeholder {
+   color: hsl(212, 12%, 71%);
+}
+
+.form-card-name, .form-card-number{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 0.25rem;
+}
+
+.form-date {
+  flex-basis: 55%; 
+  display: grid;
+}
+
+.form-date label{
+    margin-bottom: 0.25rem;
+}
+
+.form-cvc {
+  flex-basis: 45%;
+  display: grid;
+}
+
+.form-cvc label{
+    margin-bottom: 0.25rem;
+}
+
+.form-cvc input {
+  width: 100%; 
+}
+
+
+.form-date-cvc {
+  display: flex;
+  flex-direction: row; 
+  gap: 1rem;
+  justify-content: space-between; 
+  margin-bottom: 20px;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.date-inputs input {
+  width: 4rem;
+}
+
+.form-button {
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    color: hsl(270, 3%, 87%);
+    font-size: 18px;
+    background-color: hsl(278, 68%, 11%);
+}
+
+
+@media (min-width: 768px) {
+  #grid {
+    width: 100%;
+    max-width: inherit;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}

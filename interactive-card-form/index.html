@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Card Form</title>
-    <link rel="stylesheet" href="./src/styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./src/styles/style.css" />
+  </head>
+  <body>
     <main id="grid">
-        <section class="interactive-cards">
-            <div id="card-front">
-                <img src="./src/assets/icons/icon-complete.svg" alt="Card logo">
-                <p class="mock-card-number">0000 0000 0000 0000</p>
-                <p class="mock-card-name">Jane Appleseed</p>
-                <p class="mock-card-date"><span class="mock-month">00</span>/<span class="mock-year">00</span></p>
-                <img id="card-shape" src="./src/assets/images/bg-card-front.png" alt="Card front">
+      <section class="interactive-cards">
+        <div id="card-front">
+          <div class="card-front-infos">
+            <img src="./src/assets/images/card-logo.svg" alt="Card logo" />
+            <p class="mock-card-number">0000 0000 0000 0000</p>
+            <p class="mock-card-name">Jane Appleseed</p>
+            <p class="mock-card-date">
+              <span class="mock-month">00</span>/<span class="mock-year"
+                >00</span>
+            </p>
+          </div>
+
+          <img
+            id="card-shape-front"
+            src="./src/assets/images/bg-card-front.png"
+            alt="Card front"
+          />
+        </div>
+
+        <div id="card-back">
+          <p class="mock-cvc">000</p>
+          <img id="card-shape-back" src="./src/assets/images/bg-card-back.png" alt="Card back" />
+        </div>
+      </section>
+
+      <form class="form-client-card">
+        <div class="form-card-name">
+          <label for="card-name-input">Cardholder Name</label>
+          <input
+            type="text"
+            id="card-name-input"
+            placeholder="e.g. Jane Appleseed"
+          />
+        </div>
+
+        <div class="form-card-number">
+          <label for="card-number-input">Card Number</label>
+          <input
+            type="text"
+            id="card-number-input"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+        </div>
+
+        <div class="form-date-cvc">
+          <div class="form-date">
+            <label for="date-month-input">Exp. Date (MM/YY)</label>
+            <div class="date-inputs">
+              <input type="text" id="date-month-input" placeholder="MM" />
+              <input type="text" id="date-year-input" placeholder="YY" />
             </div>
+          </div>
 
-            <div id="card-back">
-                <p class="mock-cvc">000</p>
-                <img src="./src/assets/images/bg-card-back.png" alt="Card back">
-            </div>
-        </section>
+          <div class="form-cvc">
+            <label for="cvc-input">CVC</label>
+            <input type="text" id="cvc-input" placeholder="e.g. 123" />
+          </div>
+        </div>
 
-        <form class="form-client-card">
-            <label for="card-name-input">Cardholder Name</label>
-            <input type="text" id="card-name-input" placeholder="e.g. Jane Appleseed">
-
-            <label for="card-number-input">Card Number</label>
-            <input type="text" id="card-number-input" placeholder="e.g. 1234 5678 9123 0000">
-
-            <div class="form-date-cvc">
-                <div class="form-date">
-                    <label for="date-month-input">Exp. Date</label>
-                    <input type="text" id="date-month-input" placeholder="MM">
-                    <input type="text" id="date-year-input" placeholder="YY">
-                </div>
-
-                <div class="form-cvc">
-                    <label for="cvc-input">CVC</label>
-                    <input type="text" id="cvc-input" placeholder="e.g. 123">
-                </div>
-            </div>
-
-            <input type="submit" value="Confirm">
-        </form>
-        <img src="./src/assets/images/bg-main-desktop.png" alt="Background Desktop">
-        <img src="./src/assets/images/bg-main-mobile.png" alt="Background Mobile">
+        <button class="form-button">Confirm</button>
+      </form>
     </main>
+    <img
+      src="./src/assets/images/bg-main-desktop.png"
+      alt="Background Desktop"
+    />
+    <img src="./src/assets/images/bg-main-mobile.png" alt="Background Mobile" />
 
     <script src="./src/scripts/main.js"></script>
-</body>
+  </body>
 </html>
