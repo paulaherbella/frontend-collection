@@ -9,30 +9,26 @@
   <body>
     <main id="grid">
       <section class="interactive-cards">
-        <div id="card-front">
-          <div class="card-front-infos">
-            <img src="./src/assets/images/card-logo.svg" alt="Card logo" />
-            <p class="mock-card-number">0000 0000 0000 0000</p>
-            <div class="mock-name-date">
-                <p class="mock-card-name">Jane Appleseed</p>
-                <p class="mock-card-date">
-                <span class="mock-month">00</span>/<span class="mock-year"
-                >00</span>
-            </p>
-            </div>
-            
-          </div>
-
-          <img
-            id="card-shape-front"
-            src="./src/assets/images/bg-card-front.png"
-            alt="Card front"
-          />
+        <div id="card-back" aria-hidden="true">
+          <span class="mock-cvc">000</span>
         </div>
 
-        <div id="card-back">
-          <p class="mock-cvc">000</p>
-          <img id="card-shape-back" src="./src/assets/images/bg-card-back.png" alt="Card back" />
+        <div id="card-front" aria-hidden="true">
+          <img
+            src="./src/assets/images/card-logo.svg"
+            alt="Card logo"
+            class="card-logo"
+          />
+          <p class="mock-card-number">0000 0000 0000 0000</p>
+
+          <div class="card-details">
+            <span class="mock-card-name">Jane Appleseed</span>
+            <span class="mock-card-date"
+              ><span class="mock-month">00</span>/<span class="mock-year"
+                >00</span
+              ></span
+            >
+          </div>
         </div>
       </section>
 
@@ -74,7 +70,11 @@
       </form>
     </main>
     <!-- <img id="background-desktop" src="./src/assets/images/bg-main-desktop.png" alt="Background Desktop"/> -->
-    <img id="background-mobile" src="./src/assets/images/bg-main-mobile.png" alt="Background Mobile"/>
+    <img
+      id="background-mobile"
+      src="./src/assets/images/bg-main-mobile.png"
+      alt="Background Mobile"
+    />
 
     <script src="./src/scripts/main.js"></script>
   </body>
