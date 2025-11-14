@@ -172,22 +172,16 @@ input {
     gap: 0.25rem;
 }
 
-.form-date {
-    flex-basis: 55%;
+.form-date, .form-cvc {
     display: grid;
 }
 
 .form-date label {
-    margin-bottom: 0.25rem;
-}
-
-.form-cvc {
-    flex-basis: 45%;
-    display: grid;
+    margin-bottom: 0.5rem;
 }
 
 .form-cvc label {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .form-cvc input {
@@ -209,7 +203,7 @@ input {
 }
 
 .date-inputs input {
-    width: 4rem;
+    width: 5.2rem;
 }
 
 .form-button {
