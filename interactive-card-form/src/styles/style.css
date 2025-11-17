@@ -37,12 +37,17 @@ input {
 }
 
 #background-mobile {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 250px;
     z-index: 0;
+}
+
+#background-desktop {
+    display: none;
 }
 
 
@@ -216,29 +221,71 @@ input {
 }
 
 
-@media (min-width: 768px) {
+
+@media (min-width: 1024px) {
     #grid {
         width: 100%;
         max-width: inherit;
         margin: 0 auto;
         flex-direction: row;
         padding-top: 1.5rem;
+        gap: 6rem;
+    }
+
+    #background-mobile {
+        display: none;
+    }
+
+    #background-desktop {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        z-index: 0;
     }
 
     .interactive-cards {
         width: 50%;
         height: 300px;
+        top: 50%;
     }
 
     #card-front {
-        left: 10%;
-        transform: none;
-        top: 40px;
+        width: 428px;
+        height: 234px;
+        border-radius: 12px;
+        padding: 1.5rem 1.7rem;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.30);
+        left: 50%;
+        top: -90%;
     }
 
     #card-back {
-        right: 10%;
-        transform: none;
+        width: 428px;
+        height: 234px;
+        border-radius: 12px;
+        right: 15%;
         top: 0;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.30);
+    }
+
+    .mock-card-details {
+        font-size: 0.8rem;
+    }
+
+    #mock-card-number {
+        font-size: 1.7rem;
+    }
+
+    #card-back #mock-cvc {
+        font-size: 1.2rem;
+        top: 44%;
+    }
+
+    .form-client-card {
+        justify-content: center;
+        max-width: 400px;
     }
 }
