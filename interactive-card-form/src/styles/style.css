@@ -36,6 +36,12 @@ input {
     font-family: inherit;
 }
 
+button:focus,
+input:focus {
+    outline: none;
+}
+
+
 #background-mobile {
     display: block;
     position: absolute;
@@ -158,9 +164,7 @@ input {
 .form-client-card input {
     padding: 0.6rem;
     border-radius: 10px;
-    border-color: hsl(212, 12%, 71%);
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid var(--clr-gray-400);
     font-size: 1.2rem;
     font-weight: 200;
 }
@@ -315,5 +319,11 @@ input {
     .form-client-card {
         justify-content: center;
         max-width: 400px;
+    }
+
+    .thank-you-section {
+        justify-content: center;
+        margin-top: 0;
+        width: 30%;
     }
 }
