@@ -227,7 +227,7 @@ input:focus {
 }
 
 .thank-you-section {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 20px;
