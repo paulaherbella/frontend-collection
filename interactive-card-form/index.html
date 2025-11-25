@@ -38,6 +38,7 @@
             id="card-name-input"
             placeholder="e.g. Jane Appleseed"
           />
+          <span class="error-message"></span>
         </div>
 
         <div class="form-card-number">
@@ -47,20 +48,30 @@
             id="card-number-input"
             placeholder="e.g. 1234 5678 9123 0000"
           />
+          <span class="error-message"></span>
         </div>
 
         <div class="form-date-cvc">
           <div class="form-date">
             <label for="date-month-input">Exp. Date (MM/YY)</label>
+
             <div class="date-inputs">
-              <input type="text" id="date-month-input" placeholder="MM" />
-              <input type="text" id="date-year-input" placeholder="YY" />
+              <div class="input-group">
+                <input type="text" id="date-month-input" placeholder="MM" />
+                <span class="error-message"></span>
+              </div>
+
+              <div class="input-group">
+                <input type="text" id="date-year-input" placeholder="YY" />
+                <span class="error-message"></span>
+              </div>
             </div>
           </div>
 
           <div class="form-cvc">
             <label for="cvc-input">CVC</label>
             <input type="text" id="cvc-input" placeholder="e.g. 123" />
+            <span class="error-message"></span>
           </div>
         </div>
 
@@ -68,7 +79,10 @@
       </form>
 
       <section class="thank-you-section">
-        <img class="thank-you-icon" src="./src/assets/icons/icon-complete.svg" />
+        <img
+          class="thank-you-icon"
+          src="./src/assets/icons/icon-complete.svg"
+        />
 
         <p class="thank-you-title">Thank You!</p>
 

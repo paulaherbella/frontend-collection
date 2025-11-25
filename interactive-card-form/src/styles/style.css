@@ -252,6 +252,29 @@ input:focus {
     margin-bottom: 20px;
 }
 
+.error-message {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+}
+.error {
+  border-color: hsl(0, 100%, 66%);
+}
+
+input.error {
+  border-color: hsl(0, 100%, 66%);
+}
+
+.error-message {
+  color: hsl(0, 100%, 66%);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+}
+
+
+
 
 
 @media (min-width: 1024px) {

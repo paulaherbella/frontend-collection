@@ -54,9 +54,32 @@ inputCvc.addEventListener("input", () => {
   mockCvc.textContent = inputCvc.value || "000";
 });
 
-function showError(input) {
-  input.style.borderColor = "hsl(0, 100%, 66%)"; 
+function showError(input, message) {
+  const group = input.parentElement;
+  const msgEl = group.querySelector(".error-message");
+
+  input.classList.add("error");
+
+  if (msgEl) {
+    msgEl.textContent = message;
+    msgEl.classList.add("visible");
+  }
 }
+
+function clearError(input) {
+  const group = input.parentElement;
+  const msgEl = group.querySelector(".error-message");
+
+  input.classList.remove("error");
+  if (msgEl) msgEl.textContent = "";
+}
+
+// limpa erro enquanto digita
+document.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", () => clearError(input));
+});
+
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -64,7 +87,8 @@ form.addEventListener("submit", (event) => {
   let isValid = true;
 
   // limpa erros anteriores
-  document.querySelectorAll("input").forEach((i) => (i.style.borderColor = ""));
+  document.querySelectorAll("input").forEach(input => clearError(input));
+
 
   // validações
   if (!inputName.value.trim()) {
